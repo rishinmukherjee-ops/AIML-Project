@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Indian Food Recommender</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="app">
+        <header>
+            <div class="header-left">
+                <span class="logo">🍛</span>
+                <h1>Indian Food Recommender</h1>
+            </div>
+            <div class="header-right">
+                <span id="location-badge" class="badge" title="Click to refresh location">📍 Detecting...</span>
+                <button id="clear-btn" title="Clear chat history">🗑️ Clear Memory</button>
+            </div>
+        </header>
+
+        <div id="chat-container">
+            <div id="messages">
+                <div class="message assistant">
+                    <div class="bubble">
+                        Hey there! 👋 I'm your Indian food recommender. Tell me what you're in the mood for — spicy, sweet, a main course, a snack, vegetarian, non-veg — and I'll suggest dishes suited to your taste and location!
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <form id="chat-form">
+            <input
+                type="text"
+                id="user-input"
+                placeholder="e.g. I want something spicy and vegetarian..."
+                autocomplete="off"
+                required
+            />
+            <button type="submit" id="send-btn">Send</button>
+        </form>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
