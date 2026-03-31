@@ -126,6 +126,7 @@ def build_prompt(description: str, location_info: str, history: list[dict]) -> l
         f"FULL DISH DATABASE (name, ingredients, diet, prep_time, cook_time, flavor_profile, course, state, region):\n{sample}\n\n"
         "Rules:\n"
         "- Only suggest dishes that exist in the data above.\n"
+        "- Always consider the user's location and regional preferences when making recommendations.\n"
         "- Be conversational and friendly.\n"
         "- If the user asks about a dish, provide its ingredients, prep time, etc. from the data.\n"
         "- Keep recommendations relevant to the user's location and preferences.\n"
