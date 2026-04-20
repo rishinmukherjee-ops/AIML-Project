@@ -1,3 +1,5 @@
+from pyexpat.errors import messages
+
 from flask import Flask, request, jsonify, render_template, session
 import pandas as pd
 import numpy as np
@@ -185,8 +187,8 @@ def chat():
     history = chat_histories[session_id]
 
     messages = build_prompt(user_message, location_info, history)
-
-    response = ollama.chat(model='llama3.2', messages=messages)
+    response = ollama.chat(model='llama3.1:8b', messages=messages)
+    #response = ollama.chat(model='llama3.2', messages=messages)
     assistant_reply = response['message']['content']
 
     # Save to history
