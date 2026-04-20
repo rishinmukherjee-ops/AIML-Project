@@ -90,7 +90,7 @@
 
     function clearHistory() {
         localStorage.removeItem(HISTORY_KEY);
-        // Clear server-side memory
+        // Server-side memory
         fetch('/api/clear', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -99,7 +99,6 @@
         // Reset session
         sessionId = crypto.randomUUID();
         localStorage.setItem(SESSION_KEY, sessionId);
-        // Clear UI — keep only the greeting
         messagesEl.innerHTML = `
             <div class="message assistant">
                 <div class="bubble">

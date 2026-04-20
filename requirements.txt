@@ -1,5 +1,5 @@
 flask
 pandas
 numpy
-ollama (llama3.2)
+ollama
 requests
